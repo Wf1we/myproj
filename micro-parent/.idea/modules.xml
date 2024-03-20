@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../micro-common/micro-common.iml" filepath="$PROJECT_DIR$/../micro-common/micro-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../micro-dataservice/micro-dataservice.iml" filepath="$PROJECT_DIR$/../micro-dataservice/micro-dataservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../micro-pay/micro-pay.iml" filepath="$PROJECT_DIR$/../micro-pay/micro-pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../micro-task/micro-task.iml" filepath="$PROJECT_DIR$/../micro-task/micro-task.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../micro-web/micro-web.iml" filepath="$PROJECT_DIR$/../micro-web/micro-web.iml" />
+    </modules>
+  </component>
+</project>

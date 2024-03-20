@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="micro-dataservice" />
+        <module name="micro-api" />
+        <module name="micro-task" />
+        <module name="micro-web" />
+        <module name="micro-pay" />
+        <module name="micro-common" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="kqDemoWeb" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="micro-api" options="-parameters" />
+      <module name="micro-common" options="-parameters" />
+      <module name="micro-dataservice" options="-parameters" />
+      <module name="micro-parent" options="-parameters" />
+      <module name="micro-pay" options="-parameters" />
+      <module name="micro-task" options="-parameters" />
+      <module name="micro-web" options="-parameters" />
+    </option>
+  </component>
+</project>

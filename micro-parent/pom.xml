@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--SpringBoot的父-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.5</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.bjpowernode</groupId>
+    <artifactId>micro-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+
+    <!--聚合：子模块-->
+    <modules>
+        <module>../micro-api</module>
+        <module>../micro-dataservice</module>
+        <module>../micro-common</module>
+        <module>../micro-pay</module>
+    </modules>
+
+    <!--定义版本-->
+    <properties>
+        <dubbo.version>2.7.8</dubbo.version>
+        <zookeeper.version>2.7.8</zookeeper.version>
+        <mybatis.version>2.2.0</mybatis.version>
+        <fastjson.version>1.2.51</fastjson.version>
+        <httpclient.version>4.5.12</httpclient.version>
+    </properties>
+    <!--声明依赖-->
+    <dependencyManagement>
+        <!--主要是springboot没有包含的依赖-->
+        <!--dubbo,zookeeper,mybatis httpclient,fastjson -->
+        <dependencies>
+            <!--dubbo起步依赖-->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+            <!--zookeeper-->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-dependencies-zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+                <type>pom</type>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!--mybatis的起步依赖-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <!--fastjson-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!--HttpClient-->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <!-- 编译插件 -->
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <!-- 插件的版本 -->
+                <version>3.5.1</version>
+                <!-- 编译级别 -->
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <!-- 编码格式 -->
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

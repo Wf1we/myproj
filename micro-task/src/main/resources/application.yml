@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: micr-task
+
+dubbo:
+  registry:
+    address: zookeeper://localhost:2181
+  scan:
+    base-packages: com.bjpowernode.task
+  consumer:
+    check: false
+    timeout: 10000
+    retries: 0
+
+micrpay:
+  kq:
+    url: http://192.168.137.115:9000/pay/kq/task/query
+
+micrweb:
+  realname:
+    url: http://192.168.137.115:8000/ylb/realname/remove/redis

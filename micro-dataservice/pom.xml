@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!--自定义的父坐标-->
+	<parent>
+		<artifactId>micro-parent</artifactId>
+		<groupId>com.bjpowernode</groupId>
+		<version>1.0.0</version>
+		<relativePath>../micro-parent/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>micro-dataservice</artifactId>
+
+
+	<name>micro-dataservice</name>
+	<description>Dubbo Provider DB Operation</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+
+		<!--工具类，常用类-->
+		<dependency>
+			<groupId>com.bjpowernode</groupId>
+			<artifactId>micro-common</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<!--api项目依赖-->
+		<dependency>
+			<groupId>com.bjpowernode</groupId>
+			<artifactId>micro-api</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<!--dubbo起步依赖-->
+		<dependency>
+			<groupId>org.apache.dubbo</groupId>
+			<artifactId>dubbo-spring-boot-starter</artifactId>
+		</dependency>
+
+		<!--zookeeper-->
+		<dependency>
+			<groupId>org.apache.dubbo</groupId>
+			<artifactId>dubbo-dependencies-zookeeper</artifactId>
+			<type>pom</type>
+		</dependency>
+
+		<!--mybatis的起步依赖-->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+		</dependency>
+
+		<!--mysql-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!--redis-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

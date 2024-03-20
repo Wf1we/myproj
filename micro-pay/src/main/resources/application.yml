@@ -1,0 +1,23 @@
+server:
+  port: 9000
+  servlet:
+    context-path: /pay
+
+spring:
+  application:
+    name: micro-pay
+  thymeleaf:
+    cache: false
+dubbo:
+  registry:
+    address: zookeeper://localhost:2181
+  scan:
+    base-packages: com.bjpowernode.pay
+  consumer:
+    check: false
+    timeout: 10000
+    retries: 0
+kq:
+  config:
+    merchant: 1001214035601
+    bgUrl: http://47.113.198.114:9999/pay/kq/notify
